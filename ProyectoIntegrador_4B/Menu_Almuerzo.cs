@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "ProyectoIntegrador", MainLauncher = true)]
+    [Activity(Label = "ProyectoIntegrador", MainLauncher = false)]
     public class Menu_Almuerzo : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
