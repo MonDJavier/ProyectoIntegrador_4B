@@ -10,7 +10,95 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:id="@+id/linearLayout1"
-		android:background="@drawable/pedid">
+		android:background="@drawable/pedid"
+		android:gravity="center">
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="381.0dp"
+			android:id="@+id/linearLayout2"
+			android:gravity="center">
+			<TextView
+				android:text="REALIZAR PEDIDO"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView1"
+				android:textColor="#ffffffff"
+				android:textStyle="bold|italic"
+				android:textSize="40dp"
+				android:gravity="center" />
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout3"
+				android:gravity="center"
+				android:layout_marginTop="31.5dp">
+				<TextView
+					android:text="Categoria:"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/textView2"
+					android:textStyle="bold"
+					android:textSize="25dp"
+					android:textColor="#fffafafa" />
+				<Spinner
+					android:layout_width="183.0dp"
+					android:layout_height="match_parent"
+					android:id="@+id/spn_Cat" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout4"
+				android:gravity="center"
+				android:layout_marginTop="31.5dp">
+				<TextView
+					android:text="Plato:"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/textView3"
+					android:textStyle="bold"
+					android:textSize="25dp"
+					android:textColor="#fffafafa" />
+				<Spinner
+					android:layout_width="183.0dp"
+					android:layout_height="match_parent"
+					android:id="@+id/spn_Plato" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout5"
+				android:gravity="center"
+				android:layout_marginTop="31.5dp">
+				<TextView
+					android:text="Cantidad:"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/textView4"
+					android:textStyle="bold"
+					android:textSize="25dp"
+					android:textColor="#fffafafa" />
+				<NumberPicker
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/nbp_Cant"
+					android:background="#fffafafa"
+					android:gravity="center"
+					android:layoutDirection="rtl"/>
+			</LinearLayout>
+		</LinearLayout>
 	</LinearLayout>
 
 </RelativeLayout>
