@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout1"
+		android:gravity="center"
+		android:background="@drawable/fondt" >
+		<TextView
+			android:text="BIENVENIDOS"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textView1"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="50dp"
+			android:gravity="center"
+			android:background="#ff1c1e15" />
+		<TextView
+			android:text="DOGMATIC RESTAURANT"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textView2"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="30dp"
+			android:gravity="center"
+			android:layout_marginTop="52.0dp"
+			android:background="#ff1c1e15" />
+		<TextView
+			android:text="¡La mejor opcion para satisfacer tu paladar!"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textView3"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="30dp"
+			android:gravity="center"
+			android:layout_marginTop="47.0dp"
+			android:background="#ff1c1e15" />
+	</LinearLayout>
+
+</RelativeLayout>
