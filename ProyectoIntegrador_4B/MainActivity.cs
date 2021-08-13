@@ -79,13 +79,12 @@ namespace ProyectoIntegrador_4B
             {
                 // Handle the camera action
 
-                Intent intent = new Intent(this, typeof(Reservacion));
+                Intent intent = new Intent(this, typeof(Menu_Almuerzo));
                 StartActivity(intent);
             }
             else if (id == Resource.Id.nav_pc)
             {
-                Intent intent1 = new Intent(this, typeof(Menu_Almuerzo));
-                StartActivity(intent1);
+                
             }
             else if (id == Resource.Id.nav_po)
             {
