@@ -13,11 +13,11 @@ using ProyectoIntegrador_4B.com.somee.losmugiwara.www;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "PrroyectoIntegrador", MainLauncher = false)]
+    [Activity(Label = "PrroyectoIntegrador", MainLauncher = true)]
     public class Login : Activity
     {
         Base_Datos web = new Base_Datos();
-        int cont = 1;
+        //int cont = 1;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
