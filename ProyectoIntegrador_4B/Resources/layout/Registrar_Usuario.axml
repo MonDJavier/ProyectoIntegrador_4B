@@ -61,7 +61,7 @@
 						android:inputType="textMultiLine"
 						android:layout_width="233.0dp"
 						android:layout_height="match_parent"
-						android:id="@+id/editText1" />
+						android:id="@+id/edt_NA" />
 				</LinearLayout>
 				<LinearLayout
 					android:orientation="horizontal"
@@ -84,7 +84,7 @@
 						android:inputType="textMultiLine"
 						android:layout_width="241.0dp"
 						android:layout_height="match_parent"
-						android:id="@+id/editText2" />
+						android:id="@+id/edt_Usu" />
 				</LinearLayout>
 				<LinearLayout
 					android:orientation="horizontal"
@@ -107,7 +107,7 @@
 						android:inputType="textMultiLine"
 						android:layout_width="246.0dp"
 						android:layout_height="match_parent"
-						android:id="@+id/editText3" />
+						android:id="@+id/edt_Con" />
 				</LinearLayout>
 				<LinearLayout
 					android:orientation="horizontal"
@@ -130,7 +130,7 @@
 						android:inputType="number"
 						android:layout_width="237.5dp"
 						android:layout_height="match_parent"
-						android:id="@+id/editText4" />
+						android:id="@+id/edt_Tel" />
 				</LinearLayout>
 				<LinearLayout
 					android:orientation="horizontal"
@@ -153,7 +153,7 @@
 						android:inputType="date"
 						android:layout_width="233.0dp"
 						android:layout_height="match_parent"
-						android:id="@+id/editText5" />
+						android:id="@+id/edt_FN" />
 				</LinearLayout>
 			</LinearLayout>
 			<LinearLayout
