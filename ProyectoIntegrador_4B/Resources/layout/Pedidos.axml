@@ -49,7 +49,8 @@
 				<Spinner
 					android:layout_width="183.0dp"
 					android:layout_height="match_parent"
-					android:id="@+id/spn_Cat" />
+					android:id="@+id/spn_Cat"
+					android:background="#ffffffff" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -71,7 +72,8 @@
 				<Spinner
 					android:layout_width="183.0dp"
 					android:layout_height="match_parent"
-					android:id="@+id/spn_Plato" />
+					android:id="@+id/spn_Plato"
+					android:background="#ffffffff" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -89,12 +91,14 @@
 					android:id="@+id/textView4"
 					android:textStyle="bold"
 					android:textSize="25dp"
-					android:textColor="#fffafafa" />
+					android:textColor="#fffafafa"
+					android:layout_marginTop="13.0dp" />
 				<NumberPicker
-					android:layout_width="wrap_content"
-					android:layout_height="match_parent"
+					android:layout_width="92.0dp"
+					android:layout_height="67.5dp"
 					android:id="@+id/nbp_Cant"
-					android:background="#fffafafa"/>
+					android:background="#fffafafa"
+					android:layout_marginTop="5.5dp" />
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>

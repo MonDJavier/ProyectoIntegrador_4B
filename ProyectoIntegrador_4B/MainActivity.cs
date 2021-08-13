@@ -1,6 +1,7 @@
 ﻿using System;
 using Android;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -11,7 +12,7 @@ using Android.Views;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -77,14 +78,19 @@ namespace ProyectoIntegrador_4B
             if (id == Resource.Id.nav_al)
             {
                 // Handle the camera action
+
+                Intent intent = new Intent(this, typeof(Reservacion));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_pc)
             {
-
+                Intent intent1 = new Intent(this, typeof(Menu_Almuerzo));
+                StartActivity(intent1);
             }
             else if (id == Resource.Id.nav_po)
             {
-
+                Intent intent3 = new Intent(this, typeof(Pedidos));
+                StartActivity(intent3);
             }
             else if (id == Resource.Id.nav_be)
             {

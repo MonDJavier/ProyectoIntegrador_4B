@@ -13,7 +13,7 @@ using ProyectoIntegrador_4B.com.somee.losmugiwara.www;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "PrroyectoIntegrador", MainLauncher = true)]
+    [Activity(Label = "PrroyectoIntegrador", MainLauncher = false)]
     public class Login : Activity
     {
         Base_Datos web = new Base_Datos();
