@@ -89,12 +89,21 @@ namespace ProyectoIntegrador_4B
             }
             else if (id == Resource.Id.nav_po)
             {
-                Intent intent3 = new Intent(this, typeof(Pedidos));
-                StartActivity(intent3);
+                
             }
             else if (id == Resource.Id.nav_be)
             {
 
+            }
+            else if (id == Resource.Id.nav_pe)
+            {
+                Intent intent3 = new Intent(this, typeof(Pedidos));
+                StartActivity(intent3);
+            }
+            else if (id == Resource.Id.nav_re)
+            {
+                Intent intent2 = new Intent(this, typeof(Reservacion));
+                StartActivity(intent2);
             }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

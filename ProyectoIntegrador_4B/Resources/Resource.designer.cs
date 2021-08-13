@@ -2519,8 +2519,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800fe
-			public const int action_settings = 2131230974;
+			// aapt resource value: 0x7f080100
+			public const int action_settings = 2131230976;
 			
 			// aapt resource value: 0x7f0800d0
 			public const int action_text = 2131230928;
@@ -2894,17 +2894,23 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f0800fa
-			public const int nav_al = 2131230970;
+			// aapt resource value: 0x7f0800fc
+			public const int nav_al = 2131230972;
+			
+			// aapt resource value: 0x7f0800ff
+			public const int nav_be = 2131230975;
 			
 			// aapt resource value: 0x7f0800fd
-			public const int nav_be = 2131230973;
+			public const int nav_pc = 2131230973;
 			
 			// aapt resource value: 0x7f0800fb
-			public const int nav_pc = 2131230971;
+			public const int nav_pe = 2131230971;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int nav_po = 2131230972;
+			// aapt resource value: 0x7f0800fe
+			public const int nav_po = 2131230974;
+			
+			// aapt resource value: 0x7f0800fa
+			public const int nav_re = 2131230970;
 			
 			// aapt resource value: 0x7f08008c
 			public const int nav_view = 2131230860;

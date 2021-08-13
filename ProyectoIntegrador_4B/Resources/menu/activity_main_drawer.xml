@@ -5,11 +5,11 @@
   <item android:title="Servicios">
     <menu>
       <item
-            android:id="@+id/nav_al"
+            android:id="@+id/nav_re"
             android:icon="@drawable/almuerzo"
             android:title="Reservacion" />
       <item
-          android:id="@+id/nav_pc"
+          android:id="@+id/nav_pe"
           android:icon="@drawable/menu"
           android:title="Pedidos" />
     </menu>
