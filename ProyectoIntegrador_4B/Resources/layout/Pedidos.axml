@@ -94,9 +94,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
 					android:id="@+id/nbp_Cant"
-					android:background="#fffafafa"
-					android:gravity="center"
-					android:layoutDirection="rtl"/>
+					android:background="#fffafafa"/>
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>

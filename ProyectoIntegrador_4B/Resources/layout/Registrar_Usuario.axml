@@ -177,14 +177,14 @@
 					android:text=""
 					android:layout_width="73.0dp"
 					android:layout_height="match_parent"
-					android:id="@+id/button1"
+					android:id="@+id/btn_Atras"
 					android:layout_marginRight="88.0dp"
 					android:background="@drawable/atras" />
 				<Button
 					android:text=""
 					android:layout_width="79.5dp"
 					android:layout_height="64.5dp"
-					android:id="@+id/button2"
+					android:id="@+id/btn_Registrar"
 					android:background="@drawable/registrar" />
 			</LinearLayout>
 		</LinearLayout>

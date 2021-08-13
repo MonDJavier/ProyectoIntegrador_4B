@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "Pedidos",MainLauncher =true)]
+    [Activity(Label = "Pedidos",MainLauncher =false)]
     public class Pedidos : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
