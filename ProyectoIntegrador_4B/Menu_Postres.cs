@@ -12,15 +12,15 @@ using Android.Widget;
 
 namespace ProyectoIntegrador_4B
 {
-    [Activity(Label = "ProyectoIntegrador", MainLauncher = false)]
-    public class Menu_Almuerzo : Activity
+    [Activity(Label = "Menu_Postres")]
+    public class Menu_Postres : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Menu_Almuerzo);
+            SetContentView(Resource.Layout.Menu_Postres);
 
             var btn_Regresar = FindViewById<Button>(Resource.Id.button1);
 

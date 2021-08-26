@@ -84,15 +84,18 @@ namespace ProyectoIntegrador_4B
             }
             else if (id == Resource.Id.nav_pc)
             {
-                
+                Intent intent4 = new Intent(this, typeof(Menu_PlatosCarta));
+                StartActivity(intent4);
             }
             else if (id == Resource.Id.nav_po)
             {
-                
+                Intent intent5 = new Intent(this, typeof(Menu_Postres));
+                StartActivity(intent5);
             }
             else if (id == Resource.Id.nav_be)
             {
-
+                Intent intent6 = new Intent(this, typeof(Menu_Bebidascs));
+                StartActivity(intent6);
             }
             else if (id == Resource.Id.nav_pe)
             {

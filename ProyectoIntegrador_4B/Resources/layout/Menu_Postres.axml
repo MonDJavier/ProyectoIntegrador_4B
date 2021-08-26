@@ -33,21 +33,12 @@
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
 					android:id="@+id/linearLayout3" >
-					<TextView
-						android:text="OPCION 1→8.00$"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:id="@+id/textView1"
-						android:textColor="#ffffffff"
-						android:gravity="center"
-						android:textStyle="bold"
-						android:textSize="20dp" />
 					<LinearLayout
 						android:orientation="horizontal"
 						android:minWidth="25px"
 						android:minHeight="25px"
 						android:layout_width="match_parent"
-						android:layout_height="100dp"
+						android:layout_height="130dp"
 						android:id="@+id/linearLayout4"
 						android:gravity="center">
 						<LinearLayout
@@ -59,7 +50,7 @@
 							android:id="@+id/linearLayout9"
 							android:gravity="center">
 							<TextView
-								android:text="Sopa de Ajo"
+								android:text="Gelato→$2.50"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView6"
@@ -74,7 +65,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout19"
-								android:background="@drawable/sopa_ajo" />
+								android:background="@drawable/gelato" />
 						</LinearLayout>
 						<LinearLayout
 							android:orientation="vertical"
@@ -83,9 +74,9 @@
 							android:layout_width="190dp"
 							android:layout_height="match_parent"
 							android:id="@+id/linearLayout10"
-							android:gravity="center" >
+							android:gravity="center">
 							<TextView
-								android:text="Avestruz Marinada"
+								android:text="Tiramusi→$3.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView7"
@@ -100,24 +91,15 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout20"
-								android:background="@drawable/avestruz_marianda" />
+								android:background="@drawable/tiramisu" />
 						</LinearLayout>
 					</LinearLayout>
-					<TextView
-						android:text="OPCION 2→8.00$"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:id="@+id/textView2"
-						android:textColor="#ffffffff"
-						android:gravity="center"
-						android:textStyle="bold"
-						android:textSize="20dp" />
 					<LinearLayout
 						android:orientation="horizontal"
 						android:minWidth="25px"
 						android:minHeight="25px"
 						android:layout_width="match_parent"
-						android:layout_height="100dp"
+						android:layout_height="130dp"
 						android:id="@+id/linearLayout5"
 						android:gravity="center" >
 						<LinearLayout
@@ -129,7 +111,7 @@
 							android:id="@+id/linearLayout11"
 							android:gravity="center" >
 							<TextView
-								android:text="Caldo Gallego"
+								android:text="Panna Cotta→$4.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView8"
@@ -144,7 +126,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout22"
-								android:background="@drawable/caldo_gallego" />
+								android:background="@drawable/pannacotta" />
 						</LinearLayout>
 						<LinearLayout
 							android:orientation="vertical"
@@ -155,7 +137,7 @@
 							android:id="@+id/linearLayout12"
 							android:gravity="center" >
 							<TextView
-								android:text="Ave Rellana"
+								android:text="Pasteis de Belem→$.350"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView9"
@@ -170,24 +152,15 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout21"
-								android:background="@drawable/ave_rellena" />
+								android:background="@drawable/pasteisbelem" />
 						</LinearLayout>
 					</LinearLayout>
-					<TextView
-						android:text="OPCION 3→8.00$"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:id="@+id/textView3"
-						android:textColor="#ffffffff"
-						android:gravity="center"
-						android:textStyle="bold"
-						android:textSize="20dp" />
 					<LinearLayout
 						android:orientation="horizontal"
 						android:minWidth="25px"
 						android:minHeight="25px"
 						android:layout_width="match_parent"
-						android:layout_height="100dp"
+						android:layout_height="130dp"
 						android:id="@+id/linearLayout6"
 						android:gravity="center" >
 						<LinearLayout
@@ -199,7 +172,7 @@
 							android:id="@+id/linearLayout13"
 							android:gravity="center" >
 							<TextView
-								android:text="Pho Bo"
+								android:text="Paviola→$5.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView10"
@@ -214,7 +187,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout23"
-								android:background="@drawable/pho_bo" />
+								android:background="@drawable/pavlola" />
 						</LinearLayout>
 						<LinearLayout
 							android:orientation="vertical"
@@ -225,7 +198,7 @@
 							android:id="@+id/linearLayout14"
 							android:gravity="center" >
 							<TextView
-								android:text="Filete Corvina"
+								android:text="Pastafrola→$3.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView11" 
@@ -240,24 +213,15 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout24"
-								android:background="@drawable/filete_corvina" />
+								android:background="@drawable/pastafrola" />
 						</LinearLayout>
 					</LinearLayout>
-					<TextView
-						android:text="OPCION 4→8.00$"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:id="@+id/textView4"
-						android:textColor="#ffffffff"
-						android:gravity="center"
-						android:textStyle="bold"
-						android:textSize="20dp" />
 					<LinearLayout
 						android:orientation="horizontal"
 						android:minWidth="25px"
 						android:minHeight="25px"
 						android:layout_width="match_parent"
-						android:layout_height="100dp"
+						android:layout_height="130dp"
 						android:id="@+id/linearLayout7"
 						android:gravity="center" >
 						<LinearLayout
@@ -269,7 +233,7 @@
 							android:id="@+id/linearLayout15"
 							android:gravity="center" >
 							<TextView
-								android:text="Ramen de Ajo"
+								android:text="Crema de Papaya→$2.50"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView12"
@@ -284,7 +248,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout25"
-								android:background="@drawable/ramen_ajo" />
+								android:background="@drawable/cremapapaya" />
 						</LinearLayout>
 						<LinearLayout
 							android:orientation="vertical"
@@ -295,7 +259,7 @@
 							android:id="@+id/linearLayout16"
 							android:gravity="center" >
 							<TextView
-								android:text="Atun en Vino"
+								android:text="Cholado→$2.50"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView13"
@@ -310,24 +274,15 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout26"
-								android:background="@drawable/atun_vino" />
+								android:background="@drawable/cholado" />
 						</LinearLayout>
 					</LinearLayout>
-					<TextView
-						android:text="OPCION 5→8.00$"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:id="@+id/textView5"
-						android:textColor="#ffffffff"
-						android:gravity="center"
-						android:textStyle="bold"
-						android:textSize="20dp"/>
 					<LinearLayout
 						android:orientation="horizontal"
 						android:minWidth="25px"
 						android:minHeight="25px"
 						android:layout_width="match_parent"
-						android:layout_height="100dp"
+						android:layout_height="130dp"
 						android:id="@+id/linearLayout8"
 						android:gravity="center" >
 						<LinearLayout
@@ -339,7 +294,7 @@
 							android:id="@+id/linearLayout17"
 							android:gravity="center" >
 							<TextView
-								android:text="Sopa Cebolla"
+								android:text="Bunhuelos de viento→$3.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView14"
@@ -354,7 +309,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout27"
-								android:background="@drawable/sopa_cebolla" />
+								android:background="@drawable/bunuelosviento" />
 							</LinearLayout>
 						<LinearLayout
 							android:orientation="vertical"
@@ -365,7 +320,7 @@
 							android:id="@+id/linearLayout18"
 							android:gravity="center" >
 							<TextView
-								android:text="Lomo de Ciervo"
+								android:text="Milhojas→$4.00"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/textView15"
@@ -380,7 +335,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:id="@+id/linearLayout28"
-								android:background="@drawable/lomo_ciervo" />
+								android:background="@drawable/milhojas" />
 							</LinearLayout>
 					</LinearLayout>
 				</LinearLayout>
