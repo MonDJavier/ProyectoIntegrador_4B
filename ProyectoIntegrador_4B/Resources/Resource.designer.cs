@@ -2609,8 +2609,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f080101
-			public const int action_settings = 2131230977;
+			// aapt resource value: 0x7f080102
+			public const int action_settings = 2131230978;
 			
 			// aapt resource value: 0x7f0800d1
 			public const int action_text = 2131230929;
@@ -2654,32 +2654,32 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f0800a4
 			public const int btn_Iniciar = 2131230884;
 			
-			// aapt resource value: 0x7f0800ef
-			public const int btn_M1 = 2131230959;
-			
 			// aapt resource value: 0x7f0800f0
-			public const int btn_M2 = 2131230960;
+			public const int btn_M1 = 2131230960;
 			
 			// aapt resource value: 0x7f0800f1
-			public const int btn_M3 = 2131230961;
+			public const int btn_M2 = 2131230961;
 			
 			// aapt resource value: 0x7f0800f2
-			public const int btn_M4 = 2131230962;
+			public const int btn_M3 = 2131230962;
 			
 			// aapt resource value: 0x7f0800f3
-			public const int btn_M5 = 2131230963;
+			public const int btn_M4 = 2131230963;
 			
 			// aapt resource value: 0x7f0800f4
-			public const int btn_M6 = 2131230964;
+			public const int btn_M5 = 2131230964;
 			
 			// aapt resource value: 0x7f0800f5
-			public const int btn_M7 = 2131230965;
+			public const int btn_M6 = 2131230965;
 			
 			// aapt resource value: 0x7f0800f6
-			public const int btn_M8 = 2131230966;
+			public const int btn_M7 = 2131230966;
 			
 			// aapt resource value: 0x7f0800f7
-			public const int btn_M9 = 2131230967;
+			public const int btn_M8 = 2131230967;
+			
+			// aapt resource value: 0x7f0800f8
+			public const int btn_M9 = 2131230968;
 			
 			// aapt resource value: 0x7f0800a5
 			public const int btn_Registrar = 2131230885;
@@ -2858,6 +2858,9 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f0800ce
 			public const int imageView = 2131230926;
 			
+			// aapt resource value: 0x7f0800ef
+			public const int imageView1 = 2131230959;
+			
 			// aapt resource value: 0x7f0800dc
 			public const int info = 2131230940;
 			
@@ -2969,14 +2972,14 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800fa
-			public const int masked = 2131230970;
+			// aapt resource value: 0x7f0800fb
+			public const int masked = 2131230971;
 			
 			// aapt resource value: 0x7f0800d5
 			public const int media_actions = 2131230933;
 			
-			// aapt resource value: 0x7f0800f8
-			public const int message = 2131230968;
+			// aapt resource value: 0x7f0800f9
+			public const int message = 2131230969;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2987,23 +2990,23 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int nav_al = 2131230973;
-			
-			// aapt resource value: 0x7f080100
-			public const int nav_be = 2131230976;
-			
 			// aapt resource value: 0x7f0800fe
-			public const int nav_pc = 2131230974;
+			public const int nav_al = 2131230974;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int nav_pe = 2131230972;
+			// aapt resource value: 0x7f080101
+			public const int nav_be = 2131230977;
 			
 			// aapt resource value: 0x7f0800ff
-			public const int nav_po = 2131230975;
+			public const int nav_pc = 2131230975;
 			
-			// aapt resource value: 0x7f0800fb
-			public const int nav_re = 2131230971;
+			// aapt resource value: 0x7f0800fd
+			public const int nav_pe = 2131230973;
+			
+			// aapt resource value: 0x7f080100
+			public const int nav_po = 2131230976;
+			
+			// aapt resource value: 0x7f0800fc
+			public const int nav_re = 2131230972;
 			
 			// aapt resource value: 0x7f08008c
 			public const int nav_view = 2131230860;
@@ -3305,8 +3308,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800f9
-			public const int visible = 2131230969;
+			// aapt resource value: 0x7f0800fa
+			public const int visible = 2131230970;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
