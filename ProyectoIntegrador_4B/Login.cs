@@ -35,23 +35,38 @@ namespace ProyectoIntegrador_4B
 
             btn_Ingresar.Click += delegate
             {
-                if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 1)
+                if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 'A')
                 {
-                    Toast.MakeText(this, "Bienvenido al Sistema", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Bienvenido Jefe", ToastLength.Short).Show();
                     //Habilitar una nueva vista
                     Intent intent = new Intent(this, typeof(MainActivity));
                     StartActivity(intent);
 
                     //StartActivity(Intent.CreateChooser(correo, "Mensaje Enviado"));
                 }
-                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 1)
+                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 'U')
                 {
                     //Muestra mensaje en pantalla
-                    Toast.MakeText(this, "Usuario o Contraseña Invalidos", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Bienvenido Usuario", ToastLength.Short).Show();
+                    Intent intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
+
+                }
+                else if(web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 'A')
+                {
+                    //Muestra mensaje en pantalla
+                    Toast.MakeText(this, "Usuario o Contraseña incorrectos", ToastLength.Short).Show();
                     //Limpia los campos
                     edt_Usuario.Text = "";
                     edt_Contraseña.Text = "";
-
+                }
+                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 'U')
+                {
+                    //Muestra mensaje en pantalla
+                    Toast.MakeText(this, "Usuario o Contraseña incorrectos", ToastLength.Short).Show();
+                    //Limpia los campos
+                    edt_Usuario.Text = "";
+                    edt_Contraseña.Text = "";
                 }
 
             };

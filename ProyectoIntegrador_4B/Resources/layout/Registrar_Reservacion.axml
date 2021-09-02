@@ -196,17 +196,31 @@
 			android:gravity="center">
 			<Button
 				android:text=""
-				android:layout_width="91dp"
-				android:layout_height="91dp"
+				android:layout_width="52.0dp"
+				android:layout_height="54.0dp"
 				android:id="@+id/btn_Atras"
 				android:background="@drawable/atras"
-				android:layout_marginRight="131.0dp" />
+				android:layout_marginRight="18.0dp" />
 			<Button
 				android:text=""
-				android:layout_width="91dp"
-				android:layout_height="91dp"
+				android:layout_width="52.0dp"
+				android:layout_height="54.0dp"
 				android:id="@+id/btn_Registrar"
-				android:background="@drawable/registrar" />
+				android:background="@drawable/confirmar"
+				android:layout_marginRight="18.0dp"  />
+			<Button
+				android:text=""
+				android:layout_width="52.0dp"
+				android:layout_height="54.0dp"
+				android:id="@+id/btn_Editar"
+				android:background="@drawable/editar"
+				android:layout_marginRight="18.0dp"  />
+			<Button
+				android:text=""
+				android:layout_width="52.0dp"
+				android:layout_height="54.0dp"
+				android:id="@+id/btn_Eliminar"
+				android:background="@drawable/eliminar" />
 		</LinearLayout>
 	</LinearLayout>
 

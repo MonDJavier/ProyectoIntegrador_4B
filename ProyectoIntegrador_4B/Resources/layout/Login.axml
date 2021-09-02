@@ -61,6 +61,23 @@
 				android:layout_marginTop="25.5dp"
 				android:textSize="25dp"
 				android:textStyle="italic" />
+			<TextView
+				android:text="Rol"
+				android:layout_width="142.5dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView3"
+				android:textColor="#ffffffff"
+				android:textSize="25dp"
+				android:textStyle="bold"
+				android:gravity="center"
+				android:background="#ff000000"
+				android:layout_marginTop="25.0dp" />
+			<Spinner
+				android:layout_width="185.0dp"
+				android:layout_height="33.0dp"
+				android:id="@+id/spinner1"
+				android:layout_marginTop="13.0dp"
+				android:background="#ffffffff" />
 			<LinearLayout
 				android:orientation="horizontal"
 				android:minWidth="25px"
