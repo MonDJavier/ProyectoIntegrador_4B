@@ -20,6 +20,7 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
     using System.Web.Services.Protocols;
     using System.Xml.Serialization;
     using System.ComponentModel;
+    using System.Data;
     
     
     /// <remarks/>
@@ -33,11 +34,29 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
         
         private System.Threading.SendOrPostCallback RegistrarUsuarioOperationCompleted;
         
-        private System.Threading.SendOrPostCallback IngresarProductoOperationCompleted;
+        private System.Threading.SendOrPostCallback ModificarUsuarioOperationCompleted;
         
-        private System.Threading.SendOrPostCallback EliminarProductoOperationCompleted;
+        private System.Threading.SendOrPostCallback EliminarUsuarioOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ModificarPrecioOperationCompleted;
+        private System.Threading.SendOrPostCallback CargarUsuarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CargarAlmuerzoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CargarPlatosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CargarBebidasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CargarPostresOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CargarReservacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistrarReservacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarReservacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarReservacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistrarPedidoOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -84,13 +103,40 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
         public event RegistrarUsuarioCompletedEventHandler RegistrarUsuarioCompleted;
         
         /// <remarks/>
-        public event IngresarProductoCompletedEventHandler IngresarProductoCompleted;
+        public event ModificarUsuarioCompletedEventHandler ModificarUsuarioCompleted;
         
         /// <remarks/>
-        public event EliminarProductoCompletedEventHandler EliminarProductoCompleted;
+        public event EliminarUsuarioCompletedEventHandler EliminarUsuarioCompleted;
         
         /// <remarks/>
-        public event ModificarPrecioCompletedEventHandler ModificarPrecioCompleted;
+        public event CargarUsuarioCompletedEventHandler CargarUsuarioCompleted;
+        
+        /// <remarks/>
+        public event CargarAlmuerzoCompletedEventHandler CargarAlmuerzoCompleted;
+        
+        /// <remarks/>
+        public event CargarPlatosCompletedEventHandler CargarPlatosCompleted;
+        
+        /// <remarks/>
+        public event CargarBebidasCompletedEventHandler CargarBebidasCompleted;
+        
+        /// <remarks/>
+        public event CargarPostresCompletedEventHandler CargarPostresCompleted;
+        
+        /// <remarks/>
+        public event CargarReservacionCompletedEventHandler CargarReservacionCompleted;
+        
+        /// <remarks/>
+        public event RegistrarReservacionCompletedEventHandler RegistrarReservacionCompleted;
+        
+        /// <remarks/>
+        public event ModificarReservacionCompletedEventHandler ModificarReservacionCompleted;
+        
+        /// <remarks/>
+        public event EliminarReservacionCompletedEventHandler EliminarReservacionCompleted;
+        
+        /// <remarks/>
+        public event RegistrarPedidoCompletedEventHandler RegistrarPedidoCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Ingresar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -125,22 +171,23 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void RegistrarUsuario(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanacimiento) {
+        public void RegistrarUsuario(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanac, string rol) {
             this.Invoke("RegistrarUsuario", new object[] {
                         nombreapellido,
                         usuario,
                         contraseña,
                         telefono,
-                        fechanacimiento});
+                        fechanac,
+                        rol});
         }
         
         /// <remarks/>
-        public void RegistrarUsuarioAsync(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanacimiento) {
-            this.RegistrarUsuarioAsync(nombreapellido, usuario, contraseña, telefono, fechanacimiento, null);
+        public void RegistrarUsuarioAsync(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanac, string rol) {
+            this.RegistrarUsuarioAsync(nombreapellido, usuario, contraseña, telefono, fechanac, rol, null);
         }
         
         /// <remarks/>
-        public void RegistrarUsuarioAsync(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanacimiento, object userState) {
+        public void RegistrarUsuarioAsync(string nombreapellido, string usuario, string contraseña, int telefono, System.DateTime fechanac, string rol, object userState) {
             if ((this.RegistrarUsuarioOperationCompleted == null)) {
                 this.RegistrarUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarUsuarioOperationCompleted);
             }
@@ -149,7 +196,8 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
                         usuario,
                         contraseña,
                         telefono,
-                        fechanacimiento}, this.RegistrarUsuarioOperationCompleted, userState);
+                        fechanac,
+                        rol}, this.RegistrarUsuarioOperationCompleted, userState);
         }
         
         private void OnRegistrarUsuarioOperationCompleted(object arg) {
@@ -160,92 +208,378 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IngresarProducto", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void IngresarProducto(string categoria, string nombre, double precio) {
-            this.Invoke("IngresarProducto", new object[] {
-                        categoria,
-                        nombre,
-                        precio});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ModificarUsuario(string nombreapellido, int telefono, System.DateTime fecha, int id) {
+            this.Invoke("ModificarUsuario", new object[] {
+                        nombreapellido,
+                        telefono,
+                        fecha,
+                        id});
         }
         
         /// <remarks/>
-        public void IngresarProductoAsync(string categoria, string nombre, double precio) {
-            this.IngresarProductoAsync(categoria, nombre, precio, null);
+        public void ModificarUsuarioAsync(string nombreapellido, int telefono, System.DateTime fecha, int id) {
+            this.ModificarUsuarioAsync(nombreapellido, telefono, fecha, id, null);
         }
         
         /// <remarks/>
-        public void IngresarProductoAsync(string categoria, string nombre, double precio, object userState) {
-            if ((this.IngresarProductoOperationCompleted == null)) {
-                this.IngresarProductoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnIngresarProductoOperationCompleted);
+        public void ModificarUsuarioAsync(string nombreapellido, int telefono, System.DateTime fecha, int id, object userState) {
+            if ((this.ModificarUsuarioOperationCompleted == null)) {
+                this.ModificarUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarUsuarioOperationCompleted);
             }
-            this.InvokeAsync("IngresarProducto", new object[] {
-                        categoria,
-                        nombre,
-                        precio}, this.IngresarProductoOperationCompleted, userState);
+            this.InvokeAsync("ModificarUsuario", new object[] {
+                        nombreapellido,
+                        telefono,
+                        fecha,
+                        id}, this.ModificarUsuarioOperationCompleted, userState);
         }
         
-        private void OnIngresarProductoOperationCompleted(object arg) {
-            if ((this.IngresarProductoCompleted != null)) {
+        private void OnModificarUsuarioOperationCompleted(object arg) {
+            if ((this.ModificarUsuarioCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.IngresarProductoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ModificarUsuarioCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarProducto", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void EliminarProducto(string producto) {
-            this.Invoke("EliminarProducto", new object[] {
-                        producto});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void EliminarUsuario(int id) {
+            this.Invoke("EliminarUsuario", new object[] {
+                        id});
         }
         
         /// <remarks/>
-        public void EliminarProductoAsync(string producto) {
-            this.EliminarProductoAsync(producto, null);
+        public void EliminarUsuarioAsync(int id) {
+            this.EliminarUsuarioAsync(id, null);
         }
         
         /// <remarks/>
-        public void EliminarProductoAsync(string producto, object userState) {
-            if ((this.EliminarProductoOperationCompleted == null)) {
-                this.EliminarProductoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarProductoOperationCompleted);
+        public void EliminarUsuarioAsync(int id, object userState) {
+            if ((this.EliminarUsuarioOperationCompleted == null)) {
+                this.EliminarUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarUsuarioOperationCompleted);
             }
-            this.InvokeAsync("EliminarProducto", new object[] {
-                        producto}, this.EliminarProductoOperationCompleted, userState);
+            this.InvokeAsync("EliminarUsuario", new object[] {
+                        id}, this.EliminarUsuarioOperationCompleted, userState);
         }
         
-        private void OnEliminarProductoOperationCompleted(object arg) {
-            if ((this.EliminarProductoCompleted != null)) {
+        private void OnEliminarUsuarioOperationCompleted(object arg) {
+            if ((this.EliminarUsuarioCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EliminarProductoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.EliminarUsuarioCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarPrecio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ModificarPrecio(string producto, double precio) {
-            this.Invoke("ModificarPrecio", new object[] {
-                        producto,
-                        precio});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarUsuario(string Usuario) {
+            object[] results = this.Invoke("CargarUsuario", new object[] {
+                        Usuario});
+            return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void ModificarPrecioAsync(string producto, double precio) {
-            this.ModificarPrecioAsync(producto, precio, null);
+        public void CargarUsuarioAsync(string Usuario) {
+            this.CargarUsuarioAsync(Usuario, null);
         }
         
         /// <remarks/>
-        public void ModificarPrecioAsync(string producto, double precio, object userState) {
-            if ((this.ModificarPrecioOperationCompleted == null)) {
-                this.ModificarPrecioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarPrecioOperationCompleted);
+        public void CargarUsuarioAsync(string Usuario, object userState) {
+            if ((this.CargarUsuarioOperationCompleted == null)) {
+                this.CargarUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarUsuarioOperationCompleted);
             }
-            this.InvokeAsync("ModificarPrecio", new object[] {
-                        producto,
-                        precio}, this.ModificarPrecioOperationCompleted, userState);
+            this.InvokeAsync("CargarUsuario", new object[] {
+                        Usuario}, this.CargarUsuarioOperationCompleted, userState);
         }
         
-        private void OnModificarPrecioOperationCompleted(object arg) {
-            if ((this.ModificarPrecioCompleted != null)) {
+        private void OnCargarUsuarioOperationCompleted(object arg) {
+            if ((this.CargarUsuarioCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ModificarPrecioCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.CargarUsuarioCompleted(this, new CargarUsuarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarAlmuerzo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarAlmuerzo(string Almuerzo) {
+            object[] results = this.Invoke("CargarAlmuerzo", new object[] {
+                        Almuerzo});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CargarAlmuerzoAsync(string Almuerzo) {
+            this.CargarAlmuerzoAsync(Almuerzo, null);
+        }
+        
+        /// <remarks/>
+        public void CargarAlmuerzoAsync(string Almuerzo, object userState) {
+            if ((this.CargarAlmuerzoOperationCompleted == null)) {
+                this.CargarAlmuerzoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarAlmuerzoOperationCompleted);
+            }
+            this.InvokeAsync("CargarAlmuerzo", new object[] {
+                        Almuerzo}, this.CargarAlmuerzoOperationCompleted, userState);
+        }
+        
+        private void OnCargarAlmuerzoOperationCompleted(object arg) {
+            if ((this.CargarAlmuerzoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CargarAlmuerzoCompleted(this, new CargarAlmuerzoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarPlatos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarPlatos(string Platos) {
+            object[] results = this.Invoke("CargarPlatos", new object[] {
+                        Platos});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CargarPlatosAsync(string Platos) {
+            this.CargarPlatosAsync(Platos, null);
+        }
+        
+        /// <remarks/>
+        public void CargarPlatosAsync(string Platos, object userState) {
+            if ((this.CargarPlatosOperationCompleted == null)) {
+                this.CargarPlatosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarPlatosOperationCompleted);
+            }
+            this.InvokeAsync("CargarPlatos", new object[] {
+                        Platos}, this.CargarPlatosOperationCompleted, userState);
+        }
+        
+        private void OnCargarPlatosOperationCompleted(object arg) {
+            if ((this.CargarPlatosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CargarPlatosCompleted(this, new CargarPlatosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarBebidas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarBebidas(string Bebida) {
+            object[] results = this.Invoke("CargarBebidas", new object[] {
+                        Bebida});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CargarBebidasAsync(string Bebida) {
+            this.CargarBebidasAsync(Bebida, null);
+        }
+        
+        /// <remarks/>
+        public void CargarBebidasAsync(string Bebida, object userState) {
+            if ((this.CargarBebidasOperationCompleted == null)) {
+                this.CargarBebidasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarBebidasOperationCompleted);
+            }
+            this.InvokeAsync("CargarBebidas", new object[] {
+                        Bebida}, this.CargarBebidasOperationCompleted, userState);
+        }
+        
+        private void OnCargarBebidasOperationCompleted(object arg) {
+            if ((this.CargarBebidasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CargarBebidasCompleted(this, new CargarBebidasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarPostres", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarPostres(string Postres) {
+            object[] results = this.Invoke("CargarPostres", new object[] {
+                        Postres});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CargarPostresAsync(string Postres) {
+            this.CargarPostresAsync(Postres, null);
+        }
+        
+        /// <remarks/>
+        public void CargarPostresAsync(string Postres, object userState) {
+            if ((this.CargarPostresOperationCompleted == null)) {
+                this.CargarPostresOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarPostresOperationCompleted);
+            }
+            this.InvokeAsync("CargarPostres", new object[] {
+                        Postres}, this.CargarPostresOperationCompleted, userState);
+        }
+        
+        private void OnCargarPostresOperationCompleted(object arg) {
+            if ((this.CargarPostresCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CargarPostresCompleted(this, new CargarPostresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CargarReservacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet CargarReservacion(string Nombre) {
+            object[] results = this.Invoke("CargarReservacion", new object[] {
+                        Nombre});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CargarReservacionAsync(string Nombre) {
+            this.CargarReservacionAsync(Nombre, null);
+        }
+        
+        /// <remarks/>
+        public void CargarReservacionAsync(string Nombre, object userState) {
+            if ((this.CargarReservacionOperationCompleted == null)) {
+                this.CargarReservacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCargarReservacionOperationCompleted);
+            }
+            this.InvokeAsync("CargarReservacion", new object[] {
+                        Nombre}, this.CargarReservacionOperationCompleted, userState);
+        }
+        
+        private void OnCargarReservacionOperationCompleted(object arg) {
+            if ((this.CargarReservacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CargarReservacionCompleted(this, new CargarReservacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarReservacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void RegistrarReservacion(string NombreApellido, System.DateTime Fecha, int Telefono, string Email, System.DateTime Hora, int NumeroPersonas) {
+            this.Invoke("RegistrarReservacion", new object[] {
+                        NombreApellido,
+                        Fecha,
+                        Telefono,
+                        Email,
+                        Hora,
+                        NumeroPersonas});
+        }
+        
+        /// <remarks/>
+        public void RegistrarReservacionAsync(string NombreApellido, System.DateTime Fecha, int Telefono, string Email, System.DateTime Hora, int NumeroPersonas) {
+            this.RegistrarReservacionAsync(NombreApellido, Fecha, Telefono, Email, Hora, NumeroPersonas, null);
+        }
+        
+        /// <remarks/>
+        public void RegistrarReservacionAsync(string NombreApellido, System.DateTime Fecha, int Telefono, string Email, System.DateTime Hora, int NumeroPersonas, object userState) {
+            if ((this.RegistrarReservacionOperationCompleted == null)) {
+                this.RegistrarReservacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarReservacionOperationCompleted);
+            }
+            this.InvokeAsync("RegistrarReservacion", new object[] {
+                        NombreApellido,
+                        Fecha,
+                        Telefono,
+                        Email,
+                        Hora,
+                        NumeroPersonas}, this.RegistrarReservacionOperationCompleted, userState);
+        }
+        
+        private void OnRegistrarReservacionOperationCompleted(object arg) {
+            if ((this.RegistrarReservacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistrarReservacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarReservacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ModificarReservacion(string nombreapellido, int telefono, System.DateTime fecha, string Email, System.DateTime Hora, int NumeroPersonas, int id) {
+            this.Invoke("ModificarReservacion", new object[] {
+                        nombreapellido,
+                        telefono,
+                        fecha,
+                        Email,
+                        Hora,
+                        NumeroPersonas,
+                        id});
+        }
+        
+        /// <remarks/>
+        public void ModificarReservacionAsync(string nombreapellido, int telefono, System.DateTime fecha, string Email, System.DateTime Hora, int NumeroPersonas, int id) {
+            this.ModificarReservacionAsync(nombreapellido, telefono, fecha, Email, Hora, NumeroPersonas, id, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarReservacionAsync(string nombreapellido, int telefono, System.DateTime fecha, string Email, System.DateTime Hora, int NumeroPersonas, int id, object userState) {
+            if ((this.ModificarReservacionOperationCompleted == null)) {
+                this.ModificarReservacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarReservacionOperationCompleted);
+            }
+            this.InvokeAsync("ModificarReservacion", new object[] {
+                        nombreapellido,
+                        telefono,
+                        fecha,
+                        Email,
+                        Hora,
+                        NumeroPersonas,
+                        id}, this.ModificarReservacionOperationCompleted, userState);
+        }
+        
+        private void OnModificarReservacionOperationCompleted(object arg) {
+            if ((this.ModificarReservacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarReservacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarReservacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void EliminarReservacion(int id) {
+            this.Invoke("EliminarReservacion", new object[] {
+                        id});
+        }
+        
+        /// <remarks/>
+        public void EliminarReservacionAsync(int id) {
+            this.EliminarReservacionAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarReservacionAsync(int id, object userState) {
+            if ((this.EliminarReservacionOperationCompleted == null)) {
+                this.EliminarReservacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarReservacionOperationCompleted);
+            }
+            this.InvokeAsync("EliminarReservacion", new object[] {
+                        id}, this.EliminarReservacionOperationCompleted, userState);
+        }
+        
+        private void OnEliminarReservacionOperationCompleted(object arg) {
+            if ((this.EliminarReservacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarReservacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarPedido", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void RegistrarPedido(string Categoria, string Plato, float Precio, int Cantidad) {
+            this.Invoke("RegistrarPedido", new object[] {
+                        Categoria,
+                        Plato,
+                        Precio,
+                        Cantidad});
+        }
+        
+        /// <remarks/>
+        public void RegistrarPedidoAsync(string Categoria, string Plato, float Precio, int Cantidad) {
+            this.RegistrarPedidoAsync(Categoria, Plato, Precio, Cantidad, null);
+        }
+        
+        /// <remarks/>
+        public void RegistrarPedidoAsync(string Categoria, string Plato, float Precio, int Cantidad, object userState) {
+            if ((this.RegistrarPedidoOperationCompleted == null)) {
+                this.RegistrarPedidoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarPedidoOperationCompleted);
+            }
+            this.InvokeAsync("RegistrarPedido", new object[] {
+                        Categoria,
+                        Plato,
+                        Precio,
+                        Cantidad}, this.RegistrarPedidoOperationCompleted, userState);
+        }
+        
+        private void OnRegistrarPedidoOperationCompleted(object arg) {
+            if ((this.RegistrarPedidoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistrarPedidoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -300,15 +634,183 @@ namespace ProyectoIntegrador_4B.com.somee.losmugiwara.www {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void IngresarProductoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void ModificarUsuarioCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void EliminarProductoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void EliminarUsuarioCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ModificarPrecioCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void CargarUsuarioCompletedEventHandler(object sender, CargarUsuarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarUsuarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CargarAlmuerzoCompletedEventHandler(object sender, CargarAlmuerzoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarAlmuerzoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarAlmuerzoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CargarPlatosCompletedEventHandler(object sender, CargarPlatosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarPlatosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarPlatosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CargarBebidasCompletedEventHandler(object sender, CargarBebidasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarBebidasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarBebidasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CargarPostresCompletedEventHandler(object sender, CargarPostresCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarPostresCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarPostresCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CargarReservacionCompletedEventHandler(object sender, CargarReservacionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CargarReservacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CargarReservacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RegistrarReservacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ModificarReservacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void EliminarReservacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RegistrarPedidoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

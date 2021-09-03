@@ -29,13 +29,15 @@ namespace ProyectoIntegrador_4B
 
             var edt_Contraseña = FindViewById<EditText>(Resource.Id.edt_Con);
 
+            var edt_Rol = FindViewById<EditText>(Resource.Id.edt_Rol);
+
             var btn_Ingresar = FindViewById<Button>(Resource.Id.btn_Iniciar);
 
             var btn_Registrar = FindViewById<Button>(Resource.Id.btn_Registrar);
 
             btn_Ingresar.Click += delegate
             {
-                if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 'A')
+                if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 2)
                 {
                     Toast.MakeText(this, "Bienvenido Jefe", ToastLength.Short).Show();
                     //Habilitar una nueva vista
@@ -44,7 +46,7 @@ namespace ProyectoIntegrador_4B
 
                     //StartActivity(Intent.CreateChooser(correo, "Mensaje Enviado"));
                 }
-                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 'U')
+                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) == 1)
                 {
                     //Muestra mensaje en pantalla
                     Toast.MakeText(this, "Bienvenido Usuario", ToastLength.Short).Show();
@@ -52,15 +54,7 @@ namespace ProyectoIntegrador_4B
                     StartActivity(intent);
 
                 }
-                else if(web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 'A')
-                {
-                    //Muestra mensaje en pantalla
-                    Toast.MakeText(this, "Usuario o Contraseña incorrectos", ToastLength.Short).Show();
-                    //Limpia los campos
-                    edt_Usuario.Text = "";
-                    edt_Contraseña.Text = "";
-                }
-                else if (web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 'U')
+                else if(web.Ingresar(edt_Usuario.Text, edt_Contraseña.Text) != 2)
                 {
                     //Muestra mensaje en pantalla
                     Toast.MakeText(this, "Usuario o Contraseña incorrectos", ToastLength.Short).Show();

@@ -72,12 +72,15 @@
 				android:gravity="center"
 				android:background="#ff000000"
 				android:layout_marginTop="25.0dp" />
-			<Spinner
-				android:layout_width="185.0dp"
-				android:layout_height="33.0dp"
-				android:id="@+id/spinner1"
-				android:layout_marginTop="13.0dp"
-				android:background="#ffffffff" />
+			<EditText
+				android:inputType="textMultiLine"
+				android:layout_width="189.5dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/edt_Rol"
+				android:background="#ffffffff"
+				android:layout_marginTop="27.0dp"
+				android:textSize="25dp"
+				android:textStyle="italic" />
 			<LinearLayout
 				android:orientation="horizontal"
 				android:minWidth="25px"

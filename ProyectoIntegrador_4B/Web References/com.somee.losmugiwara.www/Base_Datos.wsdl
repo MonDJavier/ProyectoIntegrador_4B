@@ -24,44 +24,215 @@
             <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="telefono" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="fechanacimiento" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechanac" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="rol" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
       <s:element name="RegistrarUsuarioResponse">
         <s:complexType />
       </s:element>
-      <s:element name="IngresarProducto">
+      <s:element name="ModificarUsuario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreapellido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="telefono" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="IngresarProductoResponse">
+      <s:element name="ModificarUsuarioResponse">
         <s:complexType />
       </s:element>
-      <s:element name="EliminarProducto">
+      <s:element name="EliminarUsuario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="producto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="EliminarProductoResponse">
+      <s:element name="EliminarUsuarioResponse">
         <s:complexType />
       </s:element>
-      <s:element name="ModificarPrecio">
+      <s:element name="CargarUsuario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="producto" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ModificarPrecioResponse">
+      <s:element name="CargarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAlmuerzo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Almuerzo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAlmuerzoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarAlmuerzoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarPlatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Platos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarPlatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarPlatosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarBebidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Bebida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarBebidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarBebidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarPostres">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Postres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarPostresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarPostresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarReservacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarReservacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreApellido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Telefono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroPersonas" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarReservacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombreapellido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="telefono" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroPersonas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarReservacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarReservacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarReservacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RegistrarPedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Categoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Plato" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Precio" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarPedidoResponse">
         <s:complexType />
       </s:element>
     </s:schema>
@@ -78,23 +249,77 @@
   <wsdl:message name="RegistrarUsuarioSoapOut">
     <wsdl:part name="parameters" element="tns:RegistrarUsuarioResponse" />
   </wsdl:message>
-  <wsdl:message name="IngresarProductoSoapIn">
-    <wsdl:part name="parameters" element="tns:IngresarProducto" />
+  <wsdl:message name="ModificarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarUsuario" />
   </wsdl:message>
-  <wsdl:message name="IngresarProductoSoapOut">
-    <wsdl:part name="parameters" element="tns:IngresarProductoResponse" />
+  <wsdl:message name="ModificarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarUsuarioResponse" />
   </wsdl:message>
-  <wsdl:message name="EliminarProductoSoapIn">
-    <wsdl:part name="parameters" element="tns:EliminarProducto" />
+  <wsdl:message name="EliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
   </wsdl:message>
-  <wsdl:message name="EliminarProductoSoapOut">
-    <wsdl:part name="parameters" element="tns:EliminarProductoResponse" />
+  <wsdl:message name="EliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
   </wsdl:message>
-  <wsdl:message name="ModificarPrecioSoapIn">
-    <wsdl:part name="parameters" element="tns:ModificarPrecio" />
+  <wsdl:message name="CargarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarUsuario" />
   </wsdl:message>
-  <wsdl:message name="ModificarPrecioSoapOut">
-    <wsdl:part name="parameters" element="tns:ModificarPrecioResponse" />
+  <wsdl:message name="CargarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarAlmuerzoSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarAlmuerzo" />
+  </wsdl:message>
+  <wsdl:message name="CargarAlmuerzoSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarAlmuerzoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarPlatosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarPlatos" />
+  </wsdl:message>
+  <wsdl:message name="CargarPlatosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarPlatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarBebidasSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarBebidas" />
+  </wsdl:message>
+  <wsdl:message name="CargarBebidasSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarBebidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarPostresSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarPostres" />
+  </wsdl:message>
+  <wsdl:message name="CargarPostresSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarPostresResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="CargarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarReservacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarReservacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="ModificarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarReservacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReservacionSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarReservacion" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReservacionSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarReservacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarPedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarPedido" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarPedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarPedidoResponse" />
   </wsdl:message>
   <wsdl:portType name="Base_DatosSoap">
     <wsdl:operation name="Ingresar">
@@ -105,17 +330,53 @@
       <wsdl:input message="tns:RegistrarUsuarioSoapIn" />
       <wsdl:output message="tns:RegistrarUsuarioSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="IngresarProducto">
-      <wsdl:input message="tns:IngresarProductoSoapIn" />
-      <wsdl:output message="tns:IngresarProductoSoapOut" />
+    <wsdl:operation name="ModificarUsuario">
+      <wsdl:input message="tns:ModificarUsuarioSoapIn" />
+      <wsdl:output message="tns:ModificarUsuarioSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="EliminarProducto">
-      <wsdl:input message="tns:EliminarProductoSoapIn" />
-      <wsdl:output message="tns:EliminarProductoSoapOut" />
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input message="tns:EliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:EliminarUsuarioSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ModificarPrecio">
-      <wsdl:input message="tns:ModificarPrecioSoapIn" />
-      <wsdl:output message="tns:ModificarPrecioSoapOut" />
+    <wsdl:operation name="CargarUsuario">
+      <wsdl:input message="tns:CargarUsuarioSoapIn" />
+      <wsdl:output message="tns:CargarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarAlmuerzo">
+      <wsdl:input message="tns:CargarAlmuerzoSoapIn" />
+      <wsdl:output message="tns:CargarAlmuerzoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarPlatos">
+      <wsdl:input message="tns:CargarPlatosSoapIn" />
+      <wsdl:output message="tns:CargarPlatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarBebidas">
+      <wsdl:input message="tns:CargarBebidasSoapIn" />
+      <wsdl:output message="tns:CargarBebidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarPostres">
+      <wsdl:input message="tns:CargarPostresSoapIn" />
+      <wsdl:output message="tns:CargarPostresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarReservacion">
+      <wsdl:input message="tns:CargarReservacionSoapIn" />
+      <wsdl:output message="tns:CargarReservacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarReservacion">
+      <wsdl:input message="tns:RegistrarReservacionSoapIn" />
+      <wsdl:output message="tns:RegistrarReservacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarReservacion">
+      <wsdl:input message="tns:ModificarReservacionSoapIn" />
+      <wsdl:output message="tns:ModificarReservacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <wsdl:input message="tns:EliminarReservacionSoapIn" />
+      <wsdl:output message="tns:EliminarReservacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPedido">
+      <wsdl:input message="tns:RegistrarPedidoSoapIn" />
+      <wsdl:output message="tns:RegistrarPedidoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Base_DatosSoap" type="tns:Base_DatosSoap">
@@ -138,8 +399,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="IngresarProducto">
-      <soap:operation soapAction="http://tempuri.org/IngresarProducto" style="document" />
+    <wsdl:operation name="ModificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ModificarUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -147,8 +408,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="EliminarProducto">
-      <soap:operation soapAction="http://tempuri.org/EliminarProducto" style="document" />
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/EliminarUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -156,8 +417,89 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ModificarPrecio">
-      <soap:operation soapAction="http://tempuri.org/ModificarPrecio" style="document" />
+    <wsdl:operation name="CargarUsuario">
+      <soap:operation soapAction="http://tempuri.org/CargarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAlmuerzo">
+      <soap:operation soapAction="http://tempuri.org/CargarAlmuerzo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPlatos">
+      <soap:operation soapAction="http://tempuri.org/CargarPlatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarBebidas">
+      <soap:operation soapAction="http://tempuri.org/CargarBebidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPostres">
+      <soap:operation soapAction="http://tempuri.org/CargarPostres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarReservacion">
+      <soap:operation soapAction="http://tempuri.org/CargarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarReservacion">
+      <soap:operation soapAction="http://tempuri.org/RegistrarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarReservacion">
+      <soap:operation soapAction="http://tempuri.org/ModificarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <soap:operation soapAction="http://tempuri.org/EliminarReservacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPedido">
+      <soap:operation soapAction="http://tempuri.org/RegistrarPedido" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -186,8 +528,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="IngresarProducto">
-      <soap12:operation soapAction="http://tempuri.org/IngresarProducto" style="document" />
+    <wsdl:operation name="ModificarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ModificarUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -195,8 +537,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="EliminarProducto">
-      <soap12:operation soapAction="http://tempuri.org/EliminarProducto" style="document" />
+    <wsdl:operation name="EliminarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/EliminarUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -204,8 +546,89 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ModificarPrecio">
-      <soap12:operation soapAction="http://tempuri.org/ModificarPrecio" style="document" />
+    <wsdl:operation name="CargarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/CargarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAlmuerzo">
+      <soap12:operation soapAction="http://tempuri.org/CargarAlmuerzo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPlatos">
+      <soap12:operation soapAction="http://tempuri.org/CargarPlatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarBebidas">
+      <soap12:operation soapAction="http://tempuri.org/CargarBebidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPostres">
+      <soap12:operation soapAction="http://tempuri.org/CargarPostres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarReservacion">
+      <soap12:operation soapAction="http://tempuri.org/CargarReservacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarReservacion">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarReservacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarReservacion">
+      <soap12:operation soapAction="http://tempuri.org/ModificarReservacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservacion">
+      <soap12:operation soapAction="http://tempuri.org/EliminarReservacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPedido">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarPedido" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

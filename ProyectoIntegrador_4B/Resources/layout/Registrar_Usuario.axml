@@ -174,9 +174,9 @@
 						android:textSize="18dp"
 						android:textColor="#ff000000" />
 					<Spinner
-						android:layout_width="127.0dp"
+						android:layout_width="162.5dp"
 						android:layout_height="match_parent"
-						android:id="@+id/spinner1"/>
+						android:id="@+id/spn_Rol"/>
 				</LinearLayout>
 			</LinearLayout>
 			<LinearLayout
@@ -193,14 +193,28 @@
 					android:layout_width="45.0dp"
 					android:layout_height="45.0dp"
 					android:id="@+id/btn_Atras"
-					android:layout_marginRight="88.0dp"
+					android:layout_marginRight="27.0dp"
 					android:background="@drawable/atras" />
 				<Button
 					android:text=""
 					android:layout_width="45.0dp"
 					android:layout_height="45.0dp"
 					android:id="@+id/btn_Registrar"
+					android:layout_marginRight="27.0dp"
 					android:background="@drawable/confirmar" />
+				<Button
+					android:text=""
+					android:layout_width="45.0dp"
+					android:layout_height="45.0dp"
+					android:id="@+id/btn_Editar"
+					android:layout_marginRight="27.0dp"
+					android:background="@drawable/editar" />
+				<Button
+					android:text=""
+					android:layout_width="45.0dp"
+					android:layout_height="45.0dp"
+					android:id="@+id/btn_Eliminar"
+					android:background="@drawable/eliminar" />
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>

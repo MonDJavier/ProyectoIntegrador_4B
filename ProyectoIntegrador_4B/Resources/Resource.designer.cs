@@ -2618,8 +2618,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f080104
-			public const int action_settings = 2131230980;
+			// aapt resource value: 0x7f080106
+			public const int action_settings = 2131230982;
 			
 			// aapt resource value: 0x7f0800d2
 			public const int action_text = 2131230930;
@@ -2657,47 +2657,50 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f0800ec
-			public const int btn_Atras = 2131230956;
-			
-			// aapt resource value: 0x7f0800ed
-			public const int btn_Editar = 2131230957;
-			
 			// aapt resource value: 0x7f0800ee
-			public const int btn_Eliminar = 2131230958;
+			public const int btn_Atras = 2131230958;
+			
+			// aapt resource value: 0x7f0800ef
+			public const int btn_Editar = 2131230959;
+			
+			// aapt resource value: 0x7f0800f0
+			public const int btn_Eliminar = 2131230960;
 			
 			// aapt resource value: 0x7f0800a6
 			public const int btn_Iniciar = 2131230886;
 			
-			// aapt resource value: 0x7f0800f2
-			public const int btn_M1 = 2131230962;
-			
-			// aapt resource value: 0x7f0800f3
-			public const int btn_M2 = 2131230963;
-			
 			// aapt resource value: 0x7f0800f4
-			public const int btn_M3 = 2131230964;
+			public const int btn_M1 = 2131230964;
 			
 			// aapt resource value: 0x7f0800f5
-			public const int btn_M4 = 2131230965;
+			public const int btn_M2 = 2131230965;
 			
 			// aapt resource value: 0x7f0800f6
-			public const int btn_M5 = 2131230966;
+			public const int btn_M3 = 2131230966;
 			
 			// aapt resource value: 0x7f0800f7
-			public const int btn_M6 = 2131230967;
+			public const int btn_M4 = 2131230967;
 			
 			// aapt resource value: 0x7f0800f8
-			public const int btn_M7 = 2131230968;
+			public const int btn_M5 = 2131230968;
 			
 			// aapt resource value: 0x7f0800f9
-			public const int btn_M8 = 2131230969;
+			public const int btn_M6 = 2131230969;
 			
 			// aapt resource value: 0x7f0800fa
-			public const int btn_M9 = 2131230970;
+			public const int btn_M7 = 2131230970;
+			
+			// aapt resource value: 0x7f0800fb
+			public const int btn_M8 = 2131230971;
+			
+			// aapt resource value: 0x7f0800fc
+			public const int btn_M9 = 2131230972;
 			
 			// aapt resource value: 0x7f0800a7
 			public const int btn_Registrar = 2131230887;
+			
+			// aapt resource value: 0x7f0800e7
+			public const int btn_pedido = 2131230951;
 			
 			// aapt resource value: 0x7f0800ce
 			public const int button1 = 2131230926;
@@ -2774,23 +2777,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f08008b
 			public const int drawer_layout = 2131230859;
 			
-			// aapt resource value: 0x7f0800e7
-			public const int editText1 = 2131230951;
-			
-			// aapt resource value: 0x7f0800e8
-			public const int editText2 = 2131230952;
-			
 			// aapt resource value: 0x7f0800e6
-			public const int editText3 = 2131230950;
-			
-			// aapt resource value: 0x7f0800e9
-			public const int editText4 = 2131230953;
-			
-			// aapt resource value: 0x7f0800ea
-			public const int editText5 = 2131230954;
-			
-			// aapt resource value: 0x7f0800eb
-			public const int editText6 = 2131230955;
+			public const int editText1 = 2131230950;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -2798,14 +2786,32 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f0800a2
 			public const int edt_Con = 2131230882;
 			
+			// aapt resource value: 0x7f0800eb
+			public const int edt_E = 2131230955;
+			
+			// aapt resource value: 0x7f0800f2
+			public const int edt_FN = 2131230962;
+			
+			// aapt resource value: 0x7f0800e9
+			public const int edt_Fe = 2131230953;
+			
+			// aapt resource value: 0x7f0800ec
+			public const int edt_H = 2131230956;
+			
+			// aapt resource value: 0x7f0800e8
+			public const int edt_NA = 2131230952;
+			
+			// aapt resource value: 0x7f0800ed
+			public const int edt_NP = 2131230957;
+			
+			// aapt resource value: 0x7f0800ea
+			public const int edt_Num = 2131230954;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int edt_Rol = 2131230884;
+			
 			// aapt resource value: 0x7f0800f1
-			public const int edt_FN = 2131230961;
-			
-			// aapt resource value: 0x7f0800ef
-			public const int edt_NA = 2131230959;
-			
-			// aapt resource value: 0x7f0800f0
-			public const int edt_Tel = 2131230960;
+			public const int edt_Tel = 2131230961;
 			
 			// aapt resource value: 0x7f0800a0
 			public const int edt_Usu = 2131230880;
@@ -2984,14 +2990,14 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int masked = 2131230973;
+			// aapt resource value: 0x7f0800ff
+			public const int masked = 2131230975;
 			
 			// aapt resource value: 0x7f0800d6
 			public const int media_actions = 2131230934;
 			
-			// aapt resource value: 0x7f0800fb
-			public const int message = 2131230971;
+			// aapt resource value: 0x7f0800fd
+			public const int message = 2131230973;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3002,32 +3008,29 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f080100
-			public const int nav_al = 2131230976;
+			// aapt resource value: 0x7f080102
+			public const int nav_al = 2131230978;
+			
+			// aapt resource value: 0x7f080105
+			public const int nav_be = 2131230981;
 			
 			// aapt resource value: 0x7f080103
-			public const int nav_be = 2131230979;
+			public const int nav_pc = 2131230979;
 			
 			// aapt resource value: 0x7f080101
-			public const int nav_pc = 2131230977;
+			public const int nav_pe = 2131230977;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int nav_pe = 2131230975;
+			// aapt resource value: 0x7f080104
+			public const int nav_po = 2131230980;
 			
-			// aapt resource value: 0x7f080102
-			public const int nav_po = 2131230978;
-			
-			// aapt resource value: 0x7f0800fe
-			public const int nav_re = 2131230974;
+			// aapt resource value: 0x7f080100
+			public const int nav_re = 2131230976;
 			
 			// aapt resource value: 0x7f08008c
 			public const int nav_view = 2131230860;
 			
 			// aapt resource value: 0x7f080097
 			public const int navigation_header_container = 2131230871;
-			
-			// aapt resource value: 0x7f0800e5
-			public const int nbp_Cant = 2131230949;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -3167,9 +3170,6 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int spinner1 = 2131230884;
-			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
 			
@@ -3178,6 +3178,9 @@ namespace ProyectoIntegrador_4B
 			
 			// aapt resource value: 0x7f0800e4
 			public const int spn_Plato = 2131230948;
+			
+			// aapt resource value: 0x7f0800f3
+			public const int spn_Rol = 2131230963;
 			
 			// aapt resource value: 0x7f08002a
 			public const int src_atop = 2131230762;
@@ -3311,6 +3314,9 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
+			// aapt resource value: 0x7f0800e5
+			public const int txt_Precio = 2131230949;
+			
 			// aapt resource value: 0x7f08002d
 			public const int uniform = 2131230765;
 			
@@ -3323,8 +3329,8 @@ namespace ProyectoIntegrador_4B
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int visible = 2131230972;
+			// aapt resource value: 0x7f0800fe
+			public const int visible = 2131230974;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
